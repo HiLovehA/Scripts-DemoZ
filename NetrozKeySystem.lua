@@ -1,0 +1,170 @@
+local items = {};
+local floor_fn = math.floor;
+local random_fn = math.random;
+local remove_fn = table.remove;
+local lookup = {};
+local char_fn = string.char;
+local r4_local = 0;
+local r11_local = 2;
+local items_ref = items;
+local r12_local = 1;
+for i = 1, 256, 1 do
+	lookup[i] = i;
+end;
+local r25_local = #lookup;
+local r9 = #lookup == 0;
+repeat
+	r9 = random_fn(1, #lookup);
+	r25_local = remove_fn(lookup, r9);
+	r12_local = char_fn(r25_local - 1);
+	items_ref[r25_local] = r12_local;
+until #lookup == 0;
+r9 = {};
+r25_local = r9;
+local helper_fn = function(arg1, arg2)
+		local r30;
+		if #0 == 0 then
+			r4_local = (r4_local * 33 + 11781846046061) % 35184372088832;
+			repeat
+ 
+			until false;
+			r30 = floor_fn(r4_local / 2 ^ (13 - (r11_local - r11_local % 32) / 32));
+			floor_fn((((r30 % 4294967296) / 2 ^ (r11_local % 32)) % 1) * 4294967296);
+			floor_fn((r30 % 4294967296) / 2 ^ (r11_local % 32));
+		end;
+		return table.remove(r25_local);
+	end;
+local helper_fn_ref = helper_fn;
+helper_fn = {};
+r12_local = helper_fn;
+local r17_local = setmetatable({}, { __index = helper_fn, __metatable = nil });
+local r28_local = r17_local;
+helper_fn = function(arg1, arg2, arg3, arg4, arg5, arg6)
+		local r31, items_ref_ref, r27, r18, r7;
+		local r8 = r12_local;
+		if r12_local[arg2] then
+ 
+		else
+			items_ref_ref = items_ref;
+			r31 = string.len(arg1);
+			r8[arg2] = "";
+			r27 = 26;
+			for i = 1, r31.len(arg1), 1 do
+				r7 = string.byte(arg1, i);
+				r18 = helper_fn_ref();
+				r8[arg2] = r8[arg2] .. items_ref_ref[(r8[arg2] .. items_ref_ref[((r7 + r18) + r27) % 256 + 1]) % 256 + 1];
+			end;
+		end;
+		return arg2;
+	end;
+floor_fn = "NETROZ-BETA-%$26";
+local message = "https://t.me/xxxkxo";
+char_fn = Instance.new("ScreenGui");
+random_fn = char_fn;
+char_fn = char_fn;
+char_fn.Name = "NetrozKeySystem";
+random_fn.ResetOnSpawn = false;
+r11_local = game:GetService("CoreGui");
+random_fn.Parent = r11_local;
+local r33 = Instance.new("Frame");
+r33.Parent = random_fn;
+r11_local = UDim2.new(0, 350, 0, 200);
+r33.Size = r11_local;
+r11_local = UDim2.new(.5, -175, .5, -100);
+r33.Position = r11_local;
+r11_local = Color3.fromRGB(20, 20, 25);
+r33.BackgroundColor3 = r11_local;
+r33.Active = false;
+r33.Draggable = false;
+r4_local = Instance.new("UICorner", r33);
+items = UDim.new(0, 10);
+r4_local.CornerRadius = items;
+r4_local = Instance.new("TextLabel");
+r4_local.Parent = r33;
+items = UDim2.new(1, 0, 0, 40);
+r4_local.Size = items;
+r4_local.BackgroundTransparency = 1;
+r4_local.Text = "\216\167\217\134\216\182\217\133 \217\132\217\130\217\134\216\167\216\169 \216\167\217\132\216\170\217\132\217\138\216\172\216\177\216\167\217\133";
+items = Color3.new(1, 1, 1);
+r4_local.TextColor3 = items;
+r4_local.Font = Enum.Font.GothamBold;
+r4_local.TextSize = 18;
+r11_local = Instance.new("TextBox");
+char_fn = r11_local;
+r11_local = r11_local;
+r11_local.Parent = r33;
+lookup = UDim2.new(.9, 0, 0, 40);
+char_fn.Size = lookup;
+lookup = UDim2.new(.05, 0, .35, 0);
+char_fn.Position = lookup;
+char_fn.PlaceholderText = "\216\167\216\175\216\174\217\132 \216\167\217\132\217\133\217\129\216\170\216\167\216\173 \217\135\217\134\216\167";
+r25_local = helper_fn("", 8215269412593);
+char_fn.Text = r17_local[r25_local];
+lookup = Color3.fromRGB(30, 30, 35);
+char_fn.BackgroundColor3 = lookup;
+lookup = Color3.new(1, 1, 1);
+char_fn.TextColor3 = lookup;
+char_fn.Font = Enum.Font.Gotham;
+char_fn.TextSize = 16;
+items = Instance.new("UICorner", char_fn);
+lookup = UDim.new(0, 8);
+items.CornerRadius = lookup;
+items = Instance.new("TextButton");
+r11_local = items;
+items = items;
+items.Parent = r33;
+helper_fn_ref = UDim2.new(.9, 0, 0, 35);
+r11_local.Size = helper_fn_ref;
+helper_fn_ref = UDim2.new(.05, 0, .6, 0);
+r11_local.Position = helper_fn_ref;
+r11_local.Text = "\216\170\217\129\216\185\217\138\217\132 \216\167\217\132\216\179\217\131\216\177\216\168\216\170";
+helper_fn_ref = Color3.fromRGB(255, 255, 255);
+r11_local.BackgroundColor3 = helper_fn_ref;
+helper_fn_ref = Color3.fromRGB(0, 0, 0);
+r11_local.TextColor3 = helper_fn_ref;
+r11_local.Font = Enum.Font.GothamBold;
+r11_local.TextSize = 16;
+items_ref = Instance.new("UICorner", r11_local);
+helper_fn_ref = UDim.new(0, 8);
+items_ref.CornerRadius = helper_fn_ref;
+items_ref = Instance.new("TextButton");
+items_ref.Parent = r33;
+helper_fn_ref = UDim2.new(.9, 0, 0, 35);
+items_ref.Size = helper_fn_ref;
+helper_fn_ref = UDim2.new(.05, 0, .8, 0);
+items_ref.Position = helper_fn_ref;
+items_ref.Text = "\216\167\217\132\216\167\217\134\216\182\217\133\216\167\217\133 \217\132\217\130\217\134\216\167\216\169 \216\167\217\132\216\170\217\132\217\138";
+helper_fn_ref = Color3.fromRGB(40, 40, 45);
+items_ref.BackgroundColor3 = helper_fn_ref;
+helper_fn_ref = Color3.new(1, 1, 1);
+items_ref.TextColor3 = helper_fn_ref;
+items_ref.Font = Enum.Font.GothamBold;
+items_ref.TextSize = 16;
+lookup = Instance.new("UICorner", items_ref);
+r25_local = UDim.new(0, 8);
+lookup.CornerRadius = r25_local;
+helper_fn_ref = function(arg1, arg2, arg3, arg4, arg5)
+		if setclipboard then
+			setclipboard(message);
+		end;
+		return;
+	end;
+items_ref.MouseButton1Click.Connect(items_ref.MouseButton1Click, helper_fn_ref);
+helper_fn_ref = function()
+		local r1 = r28_local[32494259174171];
+		local ret_reg = char_fn[r28_local[32494259174171]];
+		if char_fn[r28_local[32494259174171]] == floor_fn then
+			r11_local[r28_local[33459257556188]] = r28_local[13960267585892];
+			r1 = { game:HttpGet(r28_local[26295404048340]) };
+			ret_reg = loadstring((unpack or table.unpack)(r1));
+			ret_reg();
+			task[r28_local[18266040131897]](.5);
+			random_fn.Destroy(random_fn);
+		else
+			r11_local[r28_local[8565753253780]] = r28_local[15042271075164];
+			task[r28_local[22937901558201]](1);
+			r11_local[r28_local[19844957971481]] = r28_local[13809278179614];
+		end;
+		return;
+	end;
+r11_local.MouseButton1Click.Connect(r11_local.MouseButton1Click, helper_fn_ref);
